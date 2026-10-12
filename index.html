@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Mejbahul Haq (Mejba) — EEE Student at Jashore University of Science and Technology (JUST). Portfolio showcasing robotics, drones, and electronics projects.">
+    <meta name="keywords" content="Mejbahul Haq, Mejba, EEE, JUST, Robotics, Drones, Electronics, Portfolio">
+    <meta name="author" content="Mejbahul Haq">
+
+    <title>Mejbahul Haq — EEE Student | JUST</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- =====================================================================
+       ✏️ আপনার সব তথ্য এখানে এডিট করুন (শুধু এই অংশটুকু বদলাবেন)
+       - লেখা বদলাতে: " " এর ভেতরের লেখা বদলান
+       - নতুন আইটেম যোগ করতে: একটা { ... }, ব্লক কপি করে নিচে পেস্ট করুন
+       - কোনো সেকশনের সব আইটেম মুছে [] খালি রাখলে সেই সেকশন নিজে থেকেই লুকিয়ে যাবে
+       - ছবি: assets ফোল্ডারে রেখে "assets/profile.jpg" এভাবে লিখুন
+       ===================================================================== -->
+    <script>
+        const SITE = {
+            // ── ১. আপনার মূল পরিচিতি ──
+            name: "Mejbahul Haq (Mejba)",                                   // টাইপরাইটার অ্যানিমেশনে যে পুরো নাম দেখাবে
+            shortName: "Mejba",                                     // উপরের বাম কোণের ছোট লোগো নাম
+            role: "Electrical & Electronic Engineering Student",   // নামের নিচের টাইটেল / রোল
+            session: "Session: 2025–26",                            // আপনার সেশন
+            location: "Jashore University of Science and Technology (JUST)", // বিশ্ববিদ্যালয় / ঠিকানা
+            about: "I am interested in robotics, drones, and electronics. I enjoy learning new things and working on practical engineering projects.", // ছোট বর্ণনা
+
+            email: "mdmejbahulhaq@gmail.com",
+            phone: "",
+            whatsapp: "https://wa.me/mejbahulhaq?s=th",
+
+            photo: "assets/profile.jpg",                            // আপনার মূল ছবি (Hero Photo)
+            aboutPhoto: "assets/about.jpeg",                        // About সেকশনের ছবি
+
+            // CV ও Resume লিংক (ড্রাইভে আপলোড করে লিংক দিতে পারেন, খালি রাখলে বাটন দেখাবে না)
+            cv: "",
+            cvLabel: "Curriculum Vitae",
+            resume: "",
+
+            // ব্যাকগ্রাউন্ড নিউরন / কণা অ্যানিমেশনের সেটিংস
+            neurons: {
+                on: true,                // বন্ধ করতে চাইলে false লিখুন
+                color: "#F86E49",        // রঙের কোড (কমলা / আপনার পছন্দের রঙ)
+                opacity: 0.7,            // কতটা স্পষ্ট: 0.3 = হালকা, 1 = খুব স্পষ্ট
+                glow: 1,                 // আলোর উজ্জ্বলতা
+                density: 1               // কণার সংখ্যা: 0.6 = কম, 1.2 = বেশি
+            },
+
+            // ── ২. সোশ্যাল মিডিয়া ও যোগাযোগের লিংক ──
+            // icon হতে পারে: linkedin, facebook, whatsapp, email, github, phone
+            socials: [
+                { label: "LinkedIn", icon: "linkedin", url: "https://www.linkedin.com/in/mejbahul-haq" },
+                { label: "Facebook", icon: "facebook", url: "https://www.facebook.com/mejbahul.bd" },
+                { label: "WhatsApp", icon: "whatsapp", url: "https://wa.me/mejbahulhaq?s=th" },
+                { label: "Email", icon: "email", url: "mailto:mdmejbahulhaq@gmail.com" }
+            ],
+
+            // ── ৩. বায়োগ্রাফি (About Me) ──
+            // প্রতিটি " " এক একটি আলাদা প্যারাগ্রাফ হিসেবে দেখাবে
+            biography: [
+                "I am Mejbahul Haq, a first-year Electrical & Electronic Engineering (EEE) student at Jashore University of Science and Technology (JUST), Bangladesh.",
+                "I am actively learning about robotics, drone technology, and electronic systems. I enjoy hands-on work with microcontrollers, sensors, circuits, and programming to turn concepts into functional projects.",
+                "My goal is to combine academic knowledge with practical engineering skills to contribute meaningfully to the field of electrical and electronic engineering."
+            ],
+
+            // ── ৪. পরিসংখ্যান / Quick Stats ──
+            stats: [
+                { number: "5.00", label: "GPA (SSC)", note: "Rajshahi Board · Rameshwarpur High School" },
+                { number: "4.92", label: "GPA (HSC)", note: "Rajshahi Board · Gabtali Govt. College" },
+                { number: "1st", label: "Year (B.Sc.)", note: "Department of EEE · JUST" }
+            ],
+
+            // ── ৫. শিক্ষাগত যোগ্যতা (Education) ──
+            education: [
+                {
+                    title: "B.Sc. in Electrical & Electronic Engineering",
+                    place: "Jashore University of Science and Technology (JUST)",
+                    period: "Session: 2025–26",
+                    level: "1st Year 1st semester",
+                    result: "CGPA: Ongoing",
+                    note: "Department of EEE"
+                },
+                {
+                    title: "Higher Secondary Certificate (HSC) in Science",
+                    place: "Gabtali Government College, Bogura",
+                    period: "Passing Year: 2025",
+                    level: "Higher Secondary",
+                    result: "GPA: 4.92 / 5.00",
+                    note: "Board: Rajshahi"
+                },
+                {
+                    title: "Secondary School Certificate (SSC) in Science",
+                    place: "Rameshwarpur High School",
+                    period: "Passing Year: 2023",
+                    level: "Secondary",
+                    result: "GPA: 5.00 / 5.00",
+                    note: "Board: Rajshahi"
+                }
+            ],
+
+            // ── ৬. আগ্রহের বিষয় (Interests) ──
+            // icon: robot, helicopter, microchip, bolt, brain, laptop-code
+            interests: [
+                {
+                    title: "Robotics",
+                    description: "Learning about robots, sensors, Arduino, and automation systems.",
+                    icon: "robot"
+                },
+                {
+                    title: "Drone Technology",
+                    description: "Interested in drone design, flight controllers, motors, and control systems.",
+                    icon: "helicopter"
+                },
+                {
+                    title: "Electronics",
+                    description: "Learning about electronic components, circuits, and microcontrollers.",
+                    icon: "microchip"
+                }
+            ],
+
+            // ── ৭. দক্ষতা (Technical Skills) ──
+            // icon: robot, bolt, code, arduino, wifi, tools, microchip, python
+            skills: [
+                { name: "Basic Robotics", icon: "robot" },
+                { name: "Basic Electronics", icon: "bolt" },
+                { name: "Basic C Programming", icon: "code" },
+                { name: "Arduino", icon: "arduino", isBrand: true },
+                { name: "ESP32 & IoT Basics", icon: "wifi" }
+            ],
+
+            // ── ৮. প্রজেক্ট (Projects) ──
+            // নতুন প্রজেক্ট যোগ করতে পুরো একটা { ... }, কপি করে নিচে পেস্ট করুন
+            projects: [
+                {
+                    title: "ESP32 Smart Relay Control",
+                    description: "A smart wireless relay control system built with ESP32 and Blynk IoT platform, allowing users to control electrical appliances safely through a mobile smartphone app.",
+                    category: "IoT & Embedded",
+                    image: "assets/images/esp32-relay.jpg", // ছবি না থাকলে "" ফাঁকা রাখুন
+                    icon: "microchip",
+                    tags: ["ESP32", "Blynk", "Relay Module", "Home Automation"],
+                    links: []
+                },
+                {
+                    title: "Arduino-Based LED Dot Matrix Display",
+
+                    description: "An Arduino Nano-based LED dot matrix display project using MAX7219 LED matrix modules to display custom text. The system demonstrates microcontroller programming, LED matrix interfacing, and scrolling text display.",
+
+                    category: "IoT & Embedded",
+
+                    image: "assets/dotmatrix.jpeg",
+
+                    icon: "microchip",
+
+                    tags: [
+                        "Arduino Nano",
+                        "MAX7219",
+                        "LED Dot Matrix",
+                        "Embedded Systems",
+                        "C/C++ Programming"
+                    ],
+
+                    links: []
+                },
+            ],
+
+            // ── ৯. লক্ষ্য ও অর্জন (Achievements & Goals) ──
+            achievements: [
+                {
+                    title: "Engineering Goals & Milestones",
+                    text: "My goal is to improve my knowledge, gain practical experience, and participate in engineering projects and technical activities.",
+                    icon: "bullseye"
+                }
+            ],
+
+            // ── ১০. সার্টিফিকেট ও ট্রেনিং (Certificates) ──
+            certificates: [
+                {
+                    title: "IoT Innovation Summit 2026",
+                    organization: "IEEE JUST Student Branch & IEEE YP Bangladesh — 2026",
+                    link: "assets/certificate01.jpeg",
+                    linkLabel: "View Certificate",
+                    icon: "award"
+                }
+            ]
+        };
+        window.SITE = SITE;
+    </script>
+</head>
+
+<body>
+
+    <!-- ================================================================
+       BACKGROUND ANIMATIONS
+       ================================================================ -->
+    <canvas id="particle-canvas"></canvas>
+
+    <!-- ✨ INTERACTIVE MOUSE & TOUCH EFFECTS -->
+    <div class="custom-cursor-dot" id="cursorDot" aria-hidden="true"></div>
+    <div class="custom-cursor-ring" id="cursorRing" aria-hidden="true"></div>
+    <canvas id="interaction-canvas" aria-hidden="true"></canvas>
+
+    <div class="bg-shapes" aria-hidden="true">
+        <div class="bg-shape"></div>
+        <div class="bg-shape"></div>
+        <div class="bg-shape"></div>
+        <div class="bg-shape"></div>
+        <div class="bg-shape"></div>
+    </div>
+
+    <div class="gradient-orb gradient-orb--1" aria-hidden="true"></div>
+    <div class="gradient-orb gradient-orb--2" aria-hidden="true"></div>
+    <div class="gradient-orb gradient-orb--3" aria-hidden="true"></div>
+
+
+    <!-- ================================================================
+       📱 NAVIGATION BAR
+       ================================================================ -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="#home" class="nav-logo" id="navLogo">Mejba<span>.</span></a>
+
+            <div class="nav-links" id="navLinks">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#education">Education</a>
+                <a href="#interests">Interests</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#achievements">Achievements</a>
+                <a href="#certificates">Certificates</a>
+                <a href="#contact">Contact</a>
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+
+            <button class="nav-hamburger" id="navHamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+
+    <!-- ================================================================
+       🏠 SECTION 01: HOME / HERO
+       ================================================================ -->
+    <section class="hero section" id="home">
+        <div class="hero-content">
+            <div class="hero-photo">
+                <div class="hero-photo-inner">
+                    <img src="assets/profile.jpg" alt="Profile Photo" id="heroPhoto">
+                </div>
+                <div class="photo-glow"></div>
+                <div class="photo-ring photo-ring--1"></div>
+                <div class="photo-ring photo-ring--2"></div>
+                <div class="photo-ring photo-ring--3"></div>
+            </div>
+
+            <!-- <div class="hero-status" id="heroStatus">
+                <span class="status-dot"></span>
+                <span> avilable for c</span>
+            </div> -->
+
+            <h1 class="hero-name">
+                <span class="greeting-text">Hi, I'm</span>
+                <span class="name-highlight">
+                    <span class="typewriter" id="typewriter"></span>
+                </span>
+            </h1>
+
+            <p class="hero-subtitle" id="heroSubtitle">
+                <span class="subtitle-word">Electrical</span>
+                <span class="subtitle-separator">&</span>
+                <span class="subtitle-word">Electronic</span>
+                <span class="subtitle-word">Engineering</span>
+                <span class="subtitle-word">Student</span>
+            </p>
+
+            <p class="hero-university" id="heroUniversity">
+                <i class="fas fa-university"></i> Jashore University of Science and Technology (JUST)
+            </p>
+
+            <p class="hero-session" id="heroSession">
+                <i class="fas fa-calendar-alt"></i> Session: 2025–26
+            </p>
+
+            <p class="hero-description" id="heroDescription">
+                I am interested in robotics, drones, and electronics. I enjoy learning new things and working on
+                practical engineering projects.
+            </p>
+
+            <div class="hero-buttons" id="heroButtons">
+                <a href="#projects" class="btn btn--primary btn--glow">
+                    <i class="fas fa-rocket"></i> View My Projects
+                </a>
+                <a href="#contact" class="btn btn--outline">
+                    <i class="fas fa-envelope"></i> Contact Me
+                </a>
+                <a href="#certificates" class="btn btn--outline">
+                    <i class="fas fa-certificate"></i> My Certificates
+                </a>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+            <span>Scroll Down</span>
+        </div>
+    </section>
+
+
+    <!-- ================================================================
+       👤 SECTION 02: ABOUT ME
+       ================================================================ -->
+    <section class="section section--alt" id="about">
+        <div class="container">
+            <div class="reveal">
+                <span class="section-label">About Me</span>
+                <h2 class="section-title">Who I <span class="text-gradient">Am</span></h2>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-text reveal-left">
+                    <div id="aboutBioContainer">
+                        <p>
+                            I am <strong>Mejbahul Haq</strong>, a first-year EEE student at Jashore University of
+                            Science
+                            and Technology (JUST), Bangladesh.
+                        </p>
+                        <p>
+                            I am actively learning about robotics, drone technology, and electronic systems. I enjoy
+                            hands-on work with microcontrollers, sensors, circuits, and programming to turn concepts
+                            into functional projects.
+                        </p>
+                        <p>
+                            My goal is to combine academic knowledge with practical engineering skills to contribute
+                            meaningfully to the field of electrical and electronic engineering.
+                        </p>
+                    </div>
+
+                    <!-- Quick Stats -->
+                    <div class="about-stats" id="aboutStatsContainer">
+                        <div class="stat-item">
+                            <span class="stat-number">5.00</span>
+                            <span class="stat-label">GPA (SSC)</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">4.92</span>
+                            <span class="stat-label">GPA (HSC)</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">1<sup>st</sup></span>
+                            <span class="stat-label">Year (B.Sc.)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-image reveal-right">
+                    <img src="assets/about.jpeg" alt="Mejbahul Haq" id="aboutPhoto">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ================================================================
+       🎓 SECTION 03: EDUCATION
+       ================================================================ -->
+    <section class="section" id="education">
+        <div class="container">
+            <div class="reveal" style="text-align: center;">
+                <span class="section-label">Education</span>
+                <h2 class="section-title">Academic <span class="text-gradient">Background</span></h2>
+            </div>
+
+            <div class="education-timeline" id="educationTimeline">
+                <!-- Dynamically populated from SITE.education -->
+                <div class="edu-item reveal">
+                    <h3>B.Sc. in Electrical &amp; Electronic Engineering</h3>
+                    <p class="edu-school"><i class="fas fa-university"></i> Jashore University of Science and Technology
+                        (JUST)</p>
+                    <div class="edu-details">
+                        <span><i class="fas fa-calendar"></i> Session: 2025–26</span>
+                        <span><i class="fas fa-book"></i> 1st Year 1st semester</span>
+                        <span><i class="fas fa-star"></i> Ongoing</span>
+                    </div>
+                </div>
+                <div class="edu-item reveal">
+                    <h3>Higher Secondary Certificate (HSC) in Science</h3>
+                    <p class="edu-school"><i class="fas fa-school"></i> Gabtali Government College, Bogura</p>
+                    <div class="edu-details">
+                        <span><i class="fas fa-calendar"></i> Passing Year: 2025</span>
+                        <span><i class="fas fa-star"></i> GPA: 4.92 / 5.00</span>
+                        <span><i class="fas fa-info-circle"></i> Board: Rajshahi</span>
+                    </div>
+                </div>
+                <div class="edu-item reveal">
+                    <h3>Secondary School Certificate (SSC) in Science</h3>
+                    <p class="edu-school"><i class="fas fa-school"></i> Rameshwarpur High School</p>
+                    <div class="edu-details">
+                        <span><i class="fas fa-calendar"></i> Passing Year: 2023</span>
+                        <span><i class="fas fa-star"></i> GPA: 5.00 / 5.00</span>
+                        <span><i class="fas fa-info-circle"></i> Board: Rajshahi</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ================================================================
+       💡 SECTION 04: INTERESTS
+       ================================================================ -->
+    <section class="section section--alt" id="interests">
+        <div class="container">
+            <div class="reveal" style="text-align: center;">
+                <span class="section-label">Interests</span>
+                <h2 class="section-title">What I'm <span class="text-gradient">Passionate About</span></h2>
+                <p class="section-subtitle" style="margin: 0 auto;">
+                    Areas I'm actively learning and exploring in my engineering journey.
+                </p>
+            </div>
+
+            <div class="interests-grid" id="interestsGrid">
+                <!-- Dynamically populated from SITE.interests -->
+                <div class="interest-card reveal stagger-1">
+                    <div class="interest-icon"><i class="fas fa-robot"></i></div>
+                    <h3>Robotics</h3>
+                    <p>Learning about robots, sensors, Arduino, and automation systems.</p>
+                </div>
+                <div class="interest-card reveal stagger-2">
+                    <div class="interest-icon"><i class="fas fa-helicopter"></i></div>
+                    <h3>Drone Technology</h3>
+                    <p>Interested in drone design, flight controllers, motors, and control systems.</p>
+                </div>
+                <div class="interest-card reveal stagger-3">
+                    <div class="interest-icon"><i class="fas fa-microchip"></i></div>
+                    <h3>Electronics</h3>
+                    <p>Learning about electronic components, circuits, and microcontrollers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ================================================================
+       ⚡ SECTION 05: SKILLS
+       ================================================================ -->
+    <section class="section" id="skills">
+        <div class="container">
+            <div class="reveal" style="text-align: center;">
+                <span class="section-label">Skills</span>
+                <h2 class="section-title">Technical <span class="text-gradient">Skills</span></h2>
+                <p class="section-subtitle" style="margin: 0 auto;">
+                    Technologies and tools I'm currently learning and practicing.
+                </p>
+            </div>
+
+            <div class="skills-container" id="skillsContainer">
+                <!-- Dynamically populated from SITE.skills -->
+                <div class="skill-tag reveal stagger-1"><i class="fas fa-robot"></i> Basic Robotics</div>
+                <div class="skill-tag reveal stagger-2"><i class="fas fa-bolt"></i> Basic Electronics</div>
+                <div class="skill-tag reveal stagger-3"><i class="fas fa-code"></i> Basic C Programming</div>
+                <div class="skill-tag reveal stagger-4"><i class="fab fa-arduino"></i> Arduino</div>
+                <div class="skill-tag reveal stagger-5"><i class="fas fa-wifi"></i> ESP32 &amp; IoT Basics</div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ================================================================
+       🚀 SECTION 06: PROJECTS
+       ================================================================ -->
+    <section class="section section--alt" id="projects">
+        <div class="container">
+            <div class="reveal" style="text-align: center;">
+                <span class="section-label">Projects</span>
+                <h2 class="section-title">Things I've <span class="text-gradient">Built</span></h2>
+                <p class="section-subtitle" style="margin: 0 auto;">
+                    Hands-on projects that combine learning with practical implementation.
+                </p>
+            </div>
+
+            <div class="projects-grid" id="projectsGrid">
+                <!-- Dynamically populated from SITE.projects -->
+                <div class="project-card reveal">
+                    <div class="project-card-image">
+                        <img src="assets/images/esp32-relay.jpg" alt="ESP32 Smart Relay Control"
+                            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="project-placeholder" style="display: none;">
+                            <i class="fas fa-microchip"></i>
+                        </div>
+                    </div>
+                    <div class="project-card-body">
+                        <h3>ESP32 Smart Relay Control</h3>
+                        <p>
+                            A smart wireless relay control system built with ESP32 and Blynk IoT platform, allowing
+                            users to control electrical appliances safely through a mobile smartphone app.
+                        </p>
+                        <div class="project-tags">
+                            <span>ESP32</span>
+                            <span>Blynk</span>
+                            <span>Relay Module</span>
+                            <span>Home Automation</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ================================================================
+       🏆 SECTION 07: ACHIEVEMENTS
+       ================================================================ -->
+    <section class="section" id="achievements">
+        <div class="container">
+            <div class="reveal" style="text-align: center;">
+                <span class="section-label">Achievements</span>
+                <h2 class="section-title">Goals &amp; <span class="text-gradient">Milestones</span></h2>
+            </div>
+
+            <div class="achievements-content" id="achievementsContent">
+                <!-- Dynamically populated from SITE.achievements -->
+                <div class="achievement-item reveal">
+                    <div class="achievement-icon"><i class="fas fa-bullseye"></i></div>
+                    <div>
+                        <h4>Engineering Goals &amp; Milestones</h4>
+                        <p>My goal is to improve my knowledge, gain practical experience, and participate in engineering
+                            projects and technical activities.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ================================================================
+       📜 SECTION 08: CERTIFICATES
+       ================================================================ -->
+    <section class="section section--alt" id="certificates">
+        <div class="container">
+            <div class="reveal" style="text-align: center;">
+                <span class="section-label">Certificates</span>
+                <h2 class="section-title">Certifications &amp; <span class="text-gradient">Training</span></h2>
+                <p class="section-subtitle" style="margin: 0 auto;">
+                    Courses and training programs I have completed.
+                </p>
+            </div>
+
+            <div class="certificates-grid" id="certificatesGrid">
+                <!-- Dynamically populated from SITE.certificates -->
+                <div class="certificate-card reveal stagger-1">
+                    <div class="cert-icon"><i class="fas fa-award"></i></div>
+                    <div class="cert-info">
+                        <h4>IoT Innovation Summit 2026</h4>
+                        <p>IEEE JUST Student Branch &amp; IEEE YP Bangladesh — 2026</p>
+                        <a href="assets/certificate01.jpeg" target="_blank" class="cert-link">
+                            <i class="fas fa-external-link-alt"></i> View Certificate
+                        </a>
+                    </div>
+                    <div class="cert-badge">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ================================================================
+       📧 SECTION 09: CONTACT
+       ================================================================ -->
+    <section class="section" id="contact">
+        <div class="container">
+            <div class="reveal" style="text-align: center;">
+                <span class="section-label">Contact</span>
+                <h2 class="section-title">Get In <span class="text-gradient">Touch</span></h2>
+                <p class="section-subtitle" style="margin: 0 auto;">
+                    Feel free to reach out for projects, questions, or just to say hello.
+                </p>
+            </div>
+
+            <div class="contact-grid" id="contactGrid">
+                <!-- Dynamically populated from SITE -->
+                <div class="contact-card reveal stagger-1">
+                    <div class="contact-card-icon"><i class="fas fa-envelope"></i></div>
+                    <h4>Email</h4>
+                    <a href="mailto:mdmejbahulhaq@gmail.com">mdmejbahulhaq@gmail.com</a>
+                </div>
+                <div class="contact-card reveal stagger-2">
+                    <div class="contact-card-icon"><i class="fab fa-whatsapp"></i></div>
+                    <h4>WhatsApp</h4>
+                    <a href="https://wa.me/mejbahulhaq?s=th" target="_blank">Send Message</a>
+                </div>
+                <div class="contact-card reveal stagger-3">
+                    <div class="contact-card-icon"><i class="fab fa-facebook-f"></i></div>
+                    <h4>Facebook</h4>
+                    <a href="https://www.facebook.com/mejbahul.bd" target="_blank">mejbahul.bd</a>
+                </div>
+                <div class="contact-card reveal stagger-4">
+                    <div class="contact-card-icon"><i class="fab fa-linkedin-in"></i></div>
+                    <h4>LinkedIn</h4>
+                    <a href="https://www.linkedin.com/in/mejbahul-haq" target="_blank">mejbahul-haq</a>
+                </div>
+            </div>
+
+            <div class="contact-buttons reveal" id="contactButtons">
+                <a href="mailto:mdmejbahulhaq@gmail.com" class="btn btn--primary btn--glow">
+                    <i class="fas fa-paper-plane"></i> Email Me
+                </a>
+                <a href="https://wa.me/mejbahulhaq?s=th" target="_blank" class="btn btn--outline">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ================================================================
+       🦶 FOOTER WITH CTA
+       ================================================================ -->
+    <section class="footer-cta">
+        <div class="container">
+            <div class="reveal">
+                <span class="section-label">Connect</span>
+                <h2 class="section-title">Let's Build <span>The Future.</span></h2>
+                <p class="section-subtitle">
+                    Always open to learning, engineering challenges, and exciting new projects.
+                </p>
+            </div>
+            <div class="hero-buttons reveal" style="animation: none; opacity: 1;">
+                <a href="mailto:mdmejbahulhaq@gmail.com" class="btn btn--primary">
+                    <i class="fas fa-envelope"></i> Email Me
+                </a>
+                <a href="https://www.linkedin.com/in/mejbahul-haq" target="_blank" class="btn btn--outline">
+                    <i class="fab fa-linkedin-in"></i> LinkedIn
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-social" id="footerSocial">
+                <a href="mailto:mdmejbahulhaq@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                <a href="https://www.facebook.com/mejbahul.bd" target="_blank" aria-label="Facebook"><i
+                        class="fab fa-facebook-f"></i></a>
+                <a href="https://www.linkedin.com/in/mejbahul-haq" target="_blank" aria-label="LinkedIn"><i
+                        class="fab fa-linkedin-in"></i></a>
+            </div>
+            <p id="footerName"><strong>Mejbahul Haq</strong> · Electrical &amp; Electronic Engineering Student
+            </p>
+            <p style="margin-top: 4px;">&copy; 2026 Mejbahul Haq. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Main JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>
